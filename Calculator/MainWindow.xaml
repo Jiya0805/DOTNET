@@ -1,0 +1,49 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculator" Height="450" Width="350" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="Display" Grid.Row="0" Grid.ColumnSpan="4" FontSize="32" Height="50" Margin="0,0,0,10" 
+                 HorizontalAlignment="Stretch" VerticalContentAlignment="Center" TextAlignment="Right" IsReadOnly="True"/>
+
+        <Button Content="7" Grid.Row="1" Grid.Column="0" FontSize="24" Margin="5"/>
+        <Button Content="8" Grid.Row="1" Grid.Column="1" FontSize="24" Margin="5"/>
+        <Button Content="9" Grid.Row="1" Grid.Column="2" FontSize="24" Margin="5"/>
+        <Button Content="÷" Grid.Row="1" Grid.Column="3" FontSize="24" Margin="5"/>
+
+        <Button Content="4" Grid.Row="2" Grid.Column="0" FontSize="24" Margin="5"/>
+        <Button Content="5" Grid.Row="2" Grid.Column="1" FontSize="24" Margin="5"/>
+        <Button Content="6" Grid.Row="2" Grid.Column="2" FontSize="24" Margin="5"/>
+        <Button Content="×" Grid.Row="2" Grid.Column="3" FontSize="24" Margin="5"/>
+
+        <Button Content="1" Grid.Row="3" Grid.Column="0" FontSize="24" Margin="5"/>
+        <Button Content="2" Grid.Row="3" Grid.Column="1" FontSize="24" Margin="5"/>
+        <Button Content="3" Grid.Row="3" Grid.Column="2" FontSize="24" Margin="5"/>
+        <Button Content="-" Grid.Row="3" Grid.Column="3" FontSize="24" Margin="5"/>
+
+        <Button Content="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" FontSize="24" Margin="5"/>
+        <Button Content="." Grid.Row="4" Grid.Column="2" FontSize="24" Margin="5"/>
+        <Button Content="+" Grid.Row="4" Grid.Column="3" FontSize="24" Margin="5"/>
+
+        <Button x:Name="ac" Content="C" Grid.Row="5" Grid.Column="0" FontSize="24" Margin="5" Click="ac_Click"/>
+        <Button Content="⌫" Grid.Row="5" Grid.Column="1" FontSize="24" Margin="5"/>
+        <Button Content="=" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" FontSize="24" Margin="5"/>
+
+    </Grid>
+</Window>
